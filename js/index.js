@@ -165,7 +165,7 @@ function proxima() {
     montarTela();
 }
 
-// Dar Play no audio fornecido
+// Dar Play no audio que está no caminho fornecido.
 function playAudio(caminho) {
     const audio = new Audio(caminho)
     audio.volume = 0.2

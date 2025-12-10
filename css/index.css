@@ -1,3 +1,4 @@
+/* Importa fontes locais usando @font-face */
 @font-face {
     font-family: 'Poppins';
     src: url('../fonts/Poppins-Regular.ttf') format('truetype');
@@ -26,6 +27,7 @@
     font-style: normal;
 }
 
+/* Define estilos globais para todo o projeto */
 * {
     padding: 0;
     margin: 0;
@@ -33,14 +35,15 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Cria as variaveis que serão usadas no projeto*/
 :root {
     --cor-primaria: #009DFF;
     --cor-certa: #AEFFB1;
     --cor-errada: #FFA8A8;
-
     --border-01: 1px solid #C2C2C2;
 }
 
+/* Aplica estilo no body do projeto */
 body {
     display: flex;
     align-items: center;
@@ -52,6 +55,7 @@ body {
     position: relative;
 }
 
+/* Div que possui o background imagem*/
 .box-banner {
     width: 100%;
     height: 330px;
@@ -61,6 +65,7 @@ body {
     border-bottom: 3px solid var(--cor-primaria);
 }
 
+/* Estilo da logo central */
 .box-banner img {
     width: 130px;
     position: absolute;
@@ -73,7 +78,7 @@ body {
 
 
 
-
+/* Box onde está o Quizz */
 .box-quizz {
     min-width: 40vw;
     display: flex;
@@ -81,7 +86,7 @@ body {
     gap: 1rem;
 }
 
-
+/* Primeira Linha onde tem o titulo do Quizz e quantidade de acertos do jogador*/
 .box-quizz .row1 {
     display: flex;
     align-items: center;
@@ -92,6 +97,7 @@ body {
     font-weight: 500;
 }
 
+/* Segunda Linha onde está o titulo da pergunta e o timer*/
 .box-quizz .row2 {
     display: flex;
     flex-direction: column;
@@ -120,8 +126,6 @@ body {
     justify-content: space-between;
     gap: 0.5rem;
 }
-
-
 
 .box-quizz .row2 .box-timer .div-img {
     background: var(--cor-primaria);
@@ -160,7 +164,7 @@ body {
     animation: timer 20s linear infinite;
     background: var(--cor-primaria);
 }
-
+/* Animação do barra de timer */
 @keyframes timer {
     to {
         width: 0%;
@@ -170,7 +174,7 @@ body {
 
 
 
-
+/* Terceira Linha onde está as opções de resposta da questão*/
 .box-quizz .row3 {
     display: flex;
     flex-direction: column;
@@ -191,16 +195,17 @@ body {
     scale: 1.01;
 }
 
+/* Classe estilizada de quando a resposta for certa*/
 .row3 .certa {
     background: var(--cor-certa) !important;
     animation: certa 0.8s ease-in-out;
 }
-
+/* Classe estilizada de quando a resposta for errada*/
 .row3 .errada {
     background: var(--cor-errada) !important;
 }
 
-
+/* Animação para quando a resposta certa*/
 @keyframes certa {
     0% {
         transform: translateX(10%);
@@ -222,6 +227,8 @@ body {
     }
 }
 
+
+/* Estlio do Dialog usado quando finaliza as questões*/
 #pop-up-fim{
     width: 500px;
     height: 400px;
@@ -240,6 +247,7 @@ body {
 
 
 }
+/* Animação para deixar a entrada do dialog mais suave*/
 @keyframes popupFim {
     0% {
         top: 52%;
@@ -252,9 +260,11 @@ body {
         opacity: 1;
     }
 }
+
+/* o backdrop do dialog junto com um efeito de blur*/
 #pop-up-fim::backdrop{
     background: rgba(0, 0, 0, 0.705);
-    backdrop-filter: blur(5px);      /* aplica o blur */
+    backdrop-filter: blur(5px); 
 
 }
 #pop-up-fim #content-popup{
@@ -278,6 +288,8 @@ body {
     padding: 1% 3%;
     border-radius: 5px;
 }
+
+/* Ajuse para manter a responsividade*/
 @media screen and (max-width: 1400px){
     .box-quizz {
         min-width: 80vw;
