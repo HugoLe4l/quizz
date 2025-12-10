@@ -30,6 +30,11 @@
 
 - No fim, aparece um pop-up com sua pontuação total.
 
+### 🔗 Acesso ao Projeto
+Você pode visualizar a versão hospedada do projeto clicando no link abaixo:
+
+👉 **[Acessar aplicação](https://hugole4l.github.io/quizz/)**
+
 ### Como Empacotar o Projeto
 
 ```bash
