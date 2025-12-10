@@ -96,7 +96,11 @@ body {
     font-size: clamp(2rem, 2vw, 3rem);
     font-weight: 500;
 }
-
+.box-quizz .row1 p{
+    color: var(--cor-primaria);
+    font-weight: 500;
+    border-bottom: 3px solid var(--cor-primaria);
+}
 /* Segunda Linha onde está o titulo da pergunta e o timer*/
 .box-quizz .row2 {
     display: flex;
