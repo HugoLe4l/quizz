@@ -1,6 +1,4 @@
 // Classe para criar o objeto da pergunta
-
-
 class ModeloQuestao {
     constructor(titulo, opA, opB, opC, opD, opE, certa) {
         this.titulo = titulo;
@@ -50,6 +48,7 @@ const contador_perguntas = document.getElementById('contador-perguntas')
 const contador_acertos = document.getElementById('acertos')
 const btn_recomecar = document.getElementById('btn-recomecar')
 
+//Quando clicar no botão de recomeçar, recarrega a pagina.
 btn_recomecar.addEventListener('click', () => {
     location.reload()
 })
@@ -160,11 +159,13 @@ function conferirResposta(botaoClicado) {
     setTimeout(proxima, 1500);
 }
 
+//Chama proxima questão
 function proxima() {
     numeroDaQuestao++;
     montarTela();
 }
 
+// Dar Play no audio fornecido
 function playAudio(caminho) {
     const audio = new Audio(caminho)
     audio.volume = 0.2

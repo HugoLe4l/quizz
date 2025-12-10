@@ -5,21 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="shortcut icon" href="./imagens/Logo.png" type="image/x-icon">
     <script src="./js/index.js" defer></script>
     <title>Quizz Pilar</title>
 </head>
 
 <body>
+    <!-- Banner com o background de alguns produtos da Pilar + logo-->
     <div class="box-banner" style="background-image: url('./imagens/Background.png');">
         <img src="./imagens/Logo.png" alt="">
     </div>
 
     <div class="box-quizz">
+        <!-- Primeira linha onde fica o titulo do quizz e quantidade de acertos -->
         <div class="row1">
             <h1>Quizz Pilar</h1>
             <p id="acertos">Acertos: 5</p>
         </div>
 
+        <!-- Segunda linha onde fica o titulo da pergunta e o timer -->
         <div class="row2">
             <div id="titulo">
                 <p id="contador-perguntas"></p>
@@ -35,6 +39,7 @@
             </div>
         </div>
 
+        <!-- Terceira linha onde fica as opções de resposta da pergunta -->
         <div class="row3">
             <div class="opcao certa" id="opcao1">
                 <p>Resposta 1</p>
@@ -56,6 +61,7 @@
 
     </div>
 
+    <!-- Dialog é o pop up que é exibido quando as questões terminam, nele é possivel mostrar a pontuação do jogador e um botão de recomeçar -->
     <dialog id="pop-up-fim">
         <div id="content-popup">
             <img src="./imagens/Logo.png" alt="">
